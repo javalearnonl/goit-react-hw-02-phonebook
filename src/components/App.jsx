@@ -24,7 +24,7 @@ export class App extends Component {
       number,   
     };
     this.setState(({contacts}) => {
-      const includeName = contacts.find(user => user.name === contact.name)
+      const includeName = contacts.find(user => user.name.toLowerCase() === contact.name.toLowerCase())
       if (includeName) {
         alert(`${contact.name} is already in contacs`);
       } else {
